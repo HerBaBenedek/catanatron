@@ -2,6 +2,7 @@ from collections import namedtuple
 
 from rich.table import Table
 
+from catanatron.models.player import HumanPlayer
 from catanatron.models.player import RandomPlayer
 from catanatron.players.weighted_random import WeightedRandomPlayer
 
@@ -49,6 +50,7 @@ from catanatron_experimental.machine_learning.players.playouts import (
 CliPlayer = namedtuple("CliPlayer", ["code", "name", "description", "import_fn"])
 CLI_PLAYERS = [
     CliPlayer("R", "RandomPlayer", "Chooses actions at random.", RandomPlayer),
+    CliPlayer("H", "HumanPlayer", "Human player that selects which action to take using standard input", HumanPlayer),
     CliPlayer(
         "W",
         "WeightedRandomPlayer",

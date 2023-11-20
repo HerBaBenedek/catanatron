@@ -192,7 +192,7 @@ class DebugActionNode:
         self.probas = []
 
 
-def render_debug_tree(node):
+'''def render_debug_tree(node):
     from graphviz import Digraph
 
     dot = Digraph("AlphaBetaSearch")
@@ -225,3 +225,4 @@ def render_debug_tree(node):
                 dot.edge(action_label, action_child.label, label=str(proba))
                 agenda.append(action_child)
     print(dot.render())
+'''
