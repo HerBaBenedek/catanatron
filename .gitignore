@@ -136,3 +136,25 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Scripts/activate
+Scripts/activate.bat
+Scripts/Activate.ps1
+Scripts/deactivate.bat
+Scripts/pip.exe
+Scripts/pip3.12.exe
+Scripts/pip3.exe
+Scripts/python.exe
+Scripts/pythonw.exe
+get-pip.py
+pyvenv.cfg
+venvtest/Scripts/activate
+venvtest/Scripts/activate.bat
+venvtest/Scripts/Activate.ps1
+venvtest/Scripts/deactivate.bat
+venvtest/Scripts/python.exe
+venvtest/Scripts/pythonw.exe
+Scripts/activate.fish
+Scripts/activate.nu
+Scripts/activate_this.py
+Scripts/pip-3.12.exe
+Scripts/pydoc.bat

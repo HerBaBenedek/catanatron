@@ -78,3 +78,5 @@ class RandomPlayer(Player):
     def decide(self, game, playable_actions):
         index = random.randrange(0, len(playable_actions))
         return playable_actions[index]
+    
+
