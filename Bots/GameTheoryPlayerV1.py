@@ -2,12 +2,12 @@ from catanatron import Player
 from catanatron_experimental.cli.cli_players import register_player
 from catanatron.models.enums import *
 
-@register_player("GT")
-class GameTheoryPlayer(Player):
+@register_player("GT1")
+class GameTheoryPlayerV1(Player):
 
 
 
-    def __init__(self, color, is_bot=True, action_weights={}):
+    def __init__(self, color, is_bot=True, action_weights={}, base_weights={}, node_values={}):
        
         super().__init__(color, is_bot)
         self.action_weights = {
@@ -29,8 +29,16 @@ class GameTheoryPlayer(Player):
             ActionType.CONFIRM_TRADE : 0,
             ActionType.CANCEL_TRADE : 0,
             ActionType.END_TURN : 5  }
-
         
+        self.base_weights = {
+            WHEAT: 1.350,
+            ORE: 1.329,
+            BRICK: 0.781,
+            WOOD: 0.781,
+            SHEEP: 0.760
+        }
+
+        self.node_values = {}
 
     def decide(self, game, playable_actions):
         """Should return one of the playable_actions.
@@ -41,8 +49,11 @@ class GameTheoryPlayer(Player):
         Return:
             action (Action): Chosen element of playable_actions
         """
-        print("\n")
-        print(playable_actions)
+        """print("\n")
+        print(playable_actions)"""
+
+        if len(self.node_values) == 0:
+            self.calculate_node_values(game)
         
         if len(playable_actions) == 1:
             return playable_actions[0]
@@ -60,3 +71,7 @@ class GameTheoryPlayer(Player):
                 best_action = action
 
         return best_action
+
+    def calculate_node_values(self, game):
+        print("X")
+
