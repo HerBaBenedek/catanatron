@@ -81,8 +81,9 @@ class AlphaBetaPlayer(Player):
     def __repr__(self) -> str:
         return (
             super().__repr__()
-            + f"(depth={self.depth},value_fn={self.value_fn_builder_name},prunning={self.prunning})"
         )
+        
+        """+ f"(depth={self.depth},value_fn={self.value_fn_builder_name},prunning={self.prunning})"""
 
     def alphabeta(self, game, depth, alpha, beta, deadline, node):
         """AlphaBeta MiniMax Algorithm.

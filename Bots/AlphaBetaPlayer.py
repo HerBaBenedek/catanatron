@@ -17,7 +17,7 @@ from catanatron_experimental.cli.cli_players import register_player
 ALPHABETA_DEFAULT_DEPTH = 2
 MAX_SEARCH_TIME_SECS = 20
 
-@register_player("AlphaBeta")
+@register_player("AB")
 class AlphaBetaPlayer(Player):
     """
     Player that executes an AlphaBeta Search where the value of each node
