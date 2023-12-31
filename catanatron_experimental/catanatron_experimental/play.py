@@ -242,6 +242,8 @@ def play_batch_core(num_games, players, game_config, accumulators=[]):
             catan_map=catan_map,
         )
         game.play(accumulators)
+        for player in players:
+            player.game_over()
         yield game
 
     for accumulator in accumulators:

@@ -46,6 +46,10 @@ class Player:
     def __repr__(self):
         return f"{type(self).__name__}:{self.color.value}"
 
+    def game_over(self):
+        """Hook for end of game"""
+        pass
+
 
 class SimplePlayer(Player):
     """Simple AI player that always takes the first action in the list of playable_actions"""
