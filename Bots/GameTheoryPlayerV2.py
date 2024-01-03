@@ -41,6 +41,16 @@ class GameTheoryPlayerV2(Player):
             None: 0
         }
 
+    def reset_state(self):
+
+        self.owned_resources = {
+            WHEAT: 0,
+            ORE: 0,
+            BRICK: 0,
+            WOOD: 0,
+            SHEEP: 0
+        }
+
     def decide(self, game, playable_actions):
         """Should return one of the playable_actions.
 
